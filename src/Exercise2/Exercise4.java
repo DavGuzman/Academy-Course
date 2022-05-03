@@ -13,6 +13,8 @@ public class Exercise4 {
         System.out.println("Enter one last number: ");
         double thirdNumber = scanner.nextDouble();
 
+
+
         if (firstNumber>secondNumber && firstNumber>thirdNumber){
             System.out.println(firstNumber);
         } else if (secondNumber>firstNumber && secondNumber>thirdNumber) {
@@ -21,7 +23,6 @@ public class Exercise4 {
             System.out.println(thirdNumber);
         }else {
             System.out.println("The numbers entered are equals.");
-
         }
     }
 }

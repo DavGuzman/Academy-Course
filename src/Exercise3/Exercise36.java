@@ -9,20 +9,17 @@ public class Exercise36 {
         Ejercicio 3.6. El sistema debe pedir que se rellenen los números hasta que el usuario escriba el número cero.
         Después el sistema imprimirá la suma de todos los números.
         */
+        
+            Scanner s = new Scanner(System.in);
+            int value = -1;
+            int sum = 0;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number:");
-        int number = scanner.nextInt();
-        int sum = 0;
+            while(value != 0) {
+                System.out.print("Type a value: ");
+                value = s.nextInt();
+                sum = sum + value;
+            }
 
-        while (number!=0){
-            System.out.println("Enter other name: ");
-            number = scanner.nextInt();
-            sum = sum + number;
+            System.out.println(sum);
         }
-        System.out.println(sum);
-
-
-        scanner.close();
-    }
 }
