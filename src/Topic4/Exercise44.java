@@ -33,13 +33,13 @@ public class Exercise44 {
         boolean number = true;
         if(text.length() == 0)
             number = false;
+        // Compara si es digito o letra, digito a digito.
         for(int i = 0; i < text.length(); i++)
             if(!Character.isDigit(text.charAt(i)))
                 number = false;
         return number;
     }
     public static void main(String[] args) {
-
 
         Scanner scanner = new Scanner(System.in);
         String pincode;
