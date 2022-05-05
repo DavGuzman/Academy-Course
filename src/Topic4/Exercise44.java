@@ -59,7 +59,7 @@ public class Exercise44 {
             if (pincode.equals(mypin)) {
                 System.out.println("Congrats, enter the system...");
                 break;
-            } else if (i == 2) {
+            } else if (i == 1) {
                 System.out.println("Error. Your account is blocked");
                 break;
             }else {

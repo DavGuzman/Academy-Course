@@ -10,9 +10,10 @@ import java.util.Arrays;
 public class Exercise52 {
     public static void main(String[] args) {
         countWords("I love test Automation");
+
     }
     public static void countWords(String text){
-        var words = text.split(" ");
+        var words = text.split("");
         int numberOfWords = words.length;
         String message = String.format("Your sentence contains %d words: ",numberOfWords);
         System.out.println(message);
