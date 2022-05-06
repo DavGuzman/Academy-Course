@@ -36,7 +36,7 @@ public class Exercise55 {
 
 
         String stringArrayLista = firstArray.stream().map(Objects::toString).collect(Collectors.joining());
-        //System.out.println(stringArrayLista.replace('e', 'x'));
+        System.out.println(stringArrayLista.replace('e', 'x'));
 
     }
 
