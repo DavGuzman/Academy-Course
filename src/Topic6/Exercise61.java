@@ -1,6 +1,8 @@
 package Topic6;
 
 
+import java.util.Scanner;
+
 public class Exercise61 {
 
         //1.     Cree una nueva clase Tester.
@@ -10,7 +12,8 @@ public class Exercise61 {
             String name;
             String mindset;
             String isTesterByChance;
-            double longToenails;
+            String longToenails;
+            Double calculateLongToenail;
             //4.Crear los getter y setters para cada atributo.
             public String getName() {
                 return name;
@@ -36,36 +39,47 @@ public class Exercise61 {
                 this.isTesterByChance = isTesterByChance;
             }
 
-            public double getLongToenails() {
+            public String  getLongToenails() {
                 return longToenails;
             }
 
-            public void setLongToenails(double longToenails) {
+            public void setLongToenails(String longToenails) {
                 this.longToenails = longToenails;
             }
             /*6.A partir de la clase Tester, crea un método que tenga un parámetro: el objeto tester
         y devuelva el largo de las uñas de los pies.  Averigua cómo calcularlo . Luego llama al método desde
         la clase principal e imprímelo.*/
 
-            public static int calculateLongToenail()
 
+            public Double getCalculateLongToenail() {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("How long are your nails?");
+                double longTail = scanner.nextDouble();
+                System.out.println("How wide are your nails?");
+                double nailwidth = scanner.nextDouble();
+                double calculatelongToenails = (longTail * nailwidth) / 2;
+                return calculateLongToenail;
+            }
+
+            public void setCalculateLongToenail(Double calculateLongToenail) {
+                this.calculateLongToenail = calculateLongToenail;
+            }
             //2.Cree un constructor sin argumentos, y un constructor que inicialice todos los atributos de la clase.
-            public Tester(String name, String mindset, String isTesterByChance, double longToenails){
+            public Tester(String name, String mindset, String isTesterByChance, String longToenails, double calculateLongToenail){
                 this.name = name;
                 this.mindset = mindset;
                 this.isTesterByChance = isTesterByChance;
                 this.longToenails = longToenails;
+                this.calculateLongToenail = calculateLongToenail;
                 }
-
-
 
             }
     public static void main(String[] args){
         //5.Desde la clase principal crea dos objetos con diferentes atributos y realiza las siguientes acciones:
         Tester tester1 =
-                new Tester("Juan", "So good", "Yes", "37");
+                new Tester("Juan", "So good", "Yes", "Yes", (30*1.25)/2);
         Tester tester2 =
-                new Tester("Julian", "Sometimes bad", "No", "No");
+                new Tester("Julian", "Sometimes bad", "No", "No", (15*1.45)/2);
 
         //a. Cambiar el atributo isTeserByChance del Probador 1 e imprimirlo
         tester1.isTesterByChance = "No";
@@ -73,6 +87,9 @@ public class Exercise61 {
         //b.    Modificar el atributo mindset del Probador2 e imprimirlo.
         tester2.mindset = "Now its so good";
         System.out.println(tester2.mindset);
+        tester1.calculateLongToenail = tester1.calculateLongToenail;
+        System.out.println(tester1.calculateLongToenail);
+
 
 
         }
